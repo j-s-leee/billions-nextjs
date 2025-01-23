@@ -17,10 +17,12 @@ export default async function Home() {
   if (!billions) return notFound();
   return (
     <div className="">
-      <div className="grid grid-flow-col lg:grid-cols-4 grid-cols-5 gap-4">
-        {billions.map((billion: IListBillion) => (
-          <BillionCard key={billion.id} {...billion} />
-        ))}
+      <div className="space-y-0.5 sm:space-y-1">
+        <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 items-center">
+          {billions.map((billion: IListBillion) => (
+            <BillionCard key={billion.id} {...billion} />
+          ))}
+        </div>
       </div>
     </div>
   );

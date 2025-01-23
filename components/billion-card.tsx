@@ -21,17 +21,15 @@ export default function BillionCard({
     <Link
       href={`/person/${id}`}
       key={id}
-      className="card bg-base-100 w-96 shadow-xl"
+      className="card bg-base-100 shadow-xl"
     >
       <figure>
         <img src={squareImage} alt={name} />
       </figure>
       <div className="card-body">
-        <h2 className="card-title">
-          {name}
-          <div className="badge badge-secondary">{netWorth}</div>
-        </h2>
+        <h2 className="card-title">{name}</h2>
         <div className="card-actions justify-end">
+          <div className="badge badge-secondary">{netWorth}</div>
           {industries.map((industry) => (
             <div className="badge badge-outline">{industry}</div>
           ))}
