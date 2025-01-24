@@ -5,7 +5,6 @@ import Link from "next/link";
 const AVATAR_URL = "https://avatars.githubusercontent.com/u/166684403?v=4";
 
 export interface IListBillion {
-  map: any;
   id: string;
   name: string;
   squareImage: string;
@@ -29,14 +28,8 @@ export default function BillionCard({
       key={id}
       className="card bg-base-100 shadow-xl hover:scale-105 transition-transform active:scale-95"
     >
-      <figure className="">
-        <Image
-          src={squareImage}
-          alt={name}
-          width={400}
-          height={400}
-          className=""
-        />
+      <figure>
+        <Image src={squareImage} alt={name} width={400} height={400} />
       </figure>
       <div className="card-body p-4 h-28">
         <h2 className="card-title">{name}</h2>

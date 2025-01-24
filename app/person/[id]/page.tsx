@@ -69,10 +69,7 @@ export default async function BillionDetail({ params }: IParams) {
             <span key={index}>{industry}</span>
           ))}
         </div>
-        <div className="">{billion.bio}</div>
-        <div className=""></div>
-        <div className=""></div>
-        <div className=""></div>
+        <div>{billion.bio}</div>
       </div>
 
       <h1 className="mt-24 text-3xl font-bold">Financial Assets</h1>
