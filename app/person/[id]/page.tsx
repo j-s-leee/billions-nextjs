@@ -1,3 +1,4 @@
+import { AVATAR_URL } from "@/components/billion-card";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
@@ -54,6 +55,9 @@ export default async function BillionDetail({
   if (!id) return notFound();
 
   const billion = await getBillion(id);
+  if (!billion.squareImage.startsWith("https://")) {
+    billion.squareImage = AVATAR_URL;
+  }
   return (
     <div className="min-h-screen p-8">
       <div className="flex flex-col gap-4">

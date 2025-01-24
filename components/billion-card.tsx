@@ -2,7 +2,8 @@ import { formatToBillion } from "@/utils/format";
 import Image from "next/image";
 import Link from "next/link";
 
-const AVATAR_URL = "https://avatars.githubusercontent.com/u/166684403?v=4";
+export const AVATAR_URL =
+  "https://avatars.githubusercontent.com/u/166684403?v=4";
 
 export interface IListBillion {
   id: string;
