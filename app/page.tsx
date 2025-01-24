@@ -1,6 +1,10 @@
 import BillionCard, { IListBillion } from "@/components/billion-card";
 import { notFound } from "next/navigation";
 
+export const metadata = {
+  title: "Home",
+};
+
 async function getBillions(): Promise<IListBillion> {
   const response = await fetch(
     `https://billions-api.nomadcoders.workers.dev/`,
