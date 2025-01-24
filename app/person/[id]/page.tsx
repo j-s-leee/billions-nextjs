@@ -20,6 +20,5 @@ export default async function BillionDetail({
   if (!id) return notFound();
 
   const billion = await getBillion(id);
-  console.log(billion);
   return <div>{id}</div>;
 }
