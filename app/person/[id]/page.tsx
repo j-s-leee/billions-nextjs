@@ -1,11 +1,9 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
-interface IParams {
-  params: { id: string };
-}
+type paramsType = Promise<{ id: string }>;
 
-export async function generateMetadata({ params }: IParams) {
+export async function generateMetadata({ params }: { params: paramsType }) {
   const { id } = await params;
   const billion = await getBillion(id);
   return {
@@ -47,7 +45,11 @@ async function getBillion(id: string) {
   return data;
 }
 
-export default async function BillionDetail({ params }: IParams) {
+export default async function BillionDetail({
+  params,
+}: {
+  params: paramsType;
+}) {
   const { id } = await params;
   if (!id) return notFound();
 

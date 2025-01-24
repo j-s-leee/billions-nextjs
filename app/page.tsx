@@ -5,7 +5,7 @@ export const metadata = {
   title: "Home",
 };
 
-async function getBillions(): Promise<IListBillion> {
+async function getBillions(): Promise<Array<IListBillion>> {
   const response = await fetch(
     `https://billions-api.nomadcoders.workers.dev/`,
     {
